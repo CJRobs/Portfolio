@@ -138,10 +138,21 @@ def show():
     with col2:
         st.markdown("""
         • Grade: Distinction
-        • Thesis: "Application of Machine Learning in Algorithmic Trading"
-        • Relevant Courses: Functional Programming
+        • Thesis: "Deep Learning Architectures for High-Frequency Algorithmic Trading: A Comparative Performance Analysis"
+        • Relevant Courses: Functional Programming, Cryptography, Deep Reinforcement Learning, Software Engineering, Intelligent Control & Cognitive Systems. 
         """)
-    
+    with col3:
+        st.markdown("### [University of Reading](https://www.reading.ac.uk/)")
+        st.write("Bachelors of Science in Economics")
+        st.write("2017 - 2020")
+    with col4:
+        st.markdown("""
+        • Grade: First Class (1.1)
+        • Thesis: "Spatial Determinants of Agricultural Productivity: A Geospatial Regression Analysis of Yield Variability"
+        • Relevant Courses: Applied Econometrics, Financial Economics, Accounting & Finance, Money & Banking, History of Economic Thought, Advanced Microeconomics & Advanced Macroeconomics.
+        """)
+        
+        
     # Certificates section
     st.header("Certifications")
     
