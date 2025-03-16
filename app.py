@@ -15,7 +15,7 @@ sys.stderr = WarningFilter()
 
 # Configure the page
 st.set_page_config(
-    page_title="Cameron Roberts Portfolio",
+    page_title="Cameron Roberts",
     page_icon="📊",
     layout="wide",
     initial_sidebar_state="expanded"

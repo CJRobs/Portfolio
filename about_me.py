@@ -30,9 +30,9 @@ def show():
         st.markdown("""
         I am a Results-driven data professional with a strong foundation in statistics, economics and computer science, 
         passionate about transforming complex data into actionable insights for impactful business decisions. 
-        Proficient in Python, Javascript and Cypher, I consistently deliver solutions that enhance decision-making and optimise performance. 
+        Proficient in Python, R, SQL and Cypher, I consistently deliver solutions that enhance decision-making and optimise performance. 
         
-        Leveraging frameworks such as XGBoost, PyTorch, Statsmodels and Neo4j I have tackled complex optimisation problems, 
+        Leveraging frameworks such as PyTorch, Scikit-learn and Neo4j I have tackled complex optimisation problems, 
         improved predictive forecasts, and advanced model development. Eager to embrace new challenges, 
         I am dedicated to expanding my skill set and driving meaningful change through innovative data science.
         
@@ -61,12 +61,13 @@ def show():
     with col2:
         st.subheader("Domain Expertise")
         st.markdown("""
-        * A/B & Incrementality Tests
+        * A/B & Incrementally Tests
         * Geo Experiments
-        * Forecasting
+        * Model Forecasting
         * Customer Segmentation
-        * Bays Regression Modelling
-        * Optimisations
+        * Bayesian Regression Modelling
+        * Optimizations
+        * Operational Efficiency & Automation
         """)
     
     with col3:
@@ -78,6 +79,7 @@ def show():
         * Streamlit, Dash, Flask, Shiny
         * PowerBI
         * PostgreSQL
+        * Scikit-learn, PyTorch, SciPy
         """)
     
     # Experience section
@@ -173,7 +175,7 @@ def show():
     st.markdown("""
     Explore my projects using the navigation menu on the left. Here's a quick overview:
     
-    **Project 1:** [Brief one-line description]
+    **Project 1:** Currency Exchange Network: Detecting Arbitrage Opportunities through Graph-Based Optimization
     
     **Project 2:** [Brief one-line description]
     
