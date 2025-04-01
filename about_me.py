@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
 import pandas as pd
+import base64
 
 def show():
     """Main function to display About Me content"""
@@ -13,17 +14,29 @@ def show():
     
     with col1:
         # Profile picture placeholder - replace with your own image path
-        st.image("/Users/cameronroberts/Portfolio/stock_images/Cameron Roberts.jpg", width=230)        
+        st.image("stock_images/Cameron Roberts.jpg", width=230)        
         
     with col2:
         st.subheader("Contact")
+        
+        # Regular links
         st.markdown("""
         * 📧 [thecjrobs@gmail.com](mailto:thecjrobs@gmail.com)
         * 🔗 [LinkedIn](https://www.linkedin.com/in/cjrobs/)
         * 💻 [GitHub](https://github.com/CJRobs)
-        * 📄 [Download Resume](link-to-your-resume.pdf)
         """)
-
+        
+        # Create a download button for the resume instead of a markdown link
+        with open("stock_images/Cameron-Roberts-Resume-Two-Pages.pdf", "rb") as pdf_file:
+            PDFbyte = pdf_file.read()
+        
+        st.download_button(
+            label="📄 Download Resume",
+            data=PDFbyte,
+            file_name="Cameron-Roberts-Resume.pdf",
+            mime="application/pdf"
+        )
+        
     with col3:
         # Bio section
         st.subheader("Hello, I'm Cameron")
@@ -154,22 +167,6 @@ def show():
         • Relevant Courses: Applied Econometrics, Financial Economics, Accounting & Finance, Money & Banking, History of Economic Thought, Advanced Microeconomics & Advanced Macroeconomics.
         """)
         
-        
-    # Certificates section
-    st.header("Certifications")
-    
-    certs = [
-        "AWS Certified Machine Learning - Specialty",
-        "Google Professional Data Engineer",
-        "Deep Learning Specialization - Coursera",
-        "Financial Risk Manager (FRM) - GARP"
-    ]
-    
-    # Display certifications in two columns
-    cols = st.columns(2)
-    for i, cert in enumerate(certs):
-        cols[i % 2].markdown(f"• {cert}")
-    
     # Projects highlight section
     st.header("Project Highlights")
     st.markdown("""
