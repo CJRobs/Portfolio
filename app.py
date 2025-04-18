@@ -41,14 +41,14 @@ st.markdown("""
 
 # Create the sidebar navigation
 st.sidebar.title("Navigation")
-selection = st.sidebar.radio("Go to", ["About Me", "Project 1", "Project 2", "Project 3"])
+selection = st.sidebar.radio("Go to", ["About Me", "Currency Arbitrage Network", "Equity Valuations", "Customer Segmentation"])
 
 # Display the selected page
 if selection == "About Me":
     about_me.show()
-elif selection == "Project 1":
+elif selection == "Currency Arbitrage Network":
     project1.show()
-elif selection == "Project 2":
+elif selection == "Equity Valuations":
     project2.show()
-elif selection == "Project 3":
+elif selection == "Customer Segmentation":
     project3.show()

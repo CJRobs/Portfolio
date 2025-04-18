@@ -7,7 +7,7 @@ def show():
     """Main function to display About Me content"""
 
     # Page header
-    st.markdown('<div class="main-header">About Me</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-header">About Me: Cameron Roberts</div>', unsafe_allow_html=True)
     
     # Profile section
     col1, col2, col3 = st.columns([1, 2, 3])
@@ -16,7 +16,7 @@ def show():
         # Profile picture placeholder - replace with your own image path
         st.image("stock_images/Cameron Roberts.jpg", width=230)        
         
-    with col2:
+    with col2:            
         st.subheader("Contact")
         
         # Regular links
@@ -38,20 +38,8 @@ def show():
         )
         
     with col3:
-        # Bio section
-        st.subheader("Hello, I'm Cameron")
         st.markdown("""
-        I am a Results-driven data professional with a strong foundation in statistics, economics and computer science, 
-        passionate about transforming complex data into actionable insights for impactful business decisions. 
-        Proficient in Python, R, SQL and Cypher, I consistently deliver solutions that enhance decision-making and optimise performance. 
-        
-        Leveraging frameworks such as PyTorch, Scikit-learn and Neo4j I have tackled complex optimisation problems, 
-        improved predictive forecasts, and advanced model development. Eager to embrace new challenges, 
-        I am dedicated to expanding my skill set and driving meaningful change through innovative data science.
-        
-        This portfolio showcases some of my key projects that demonstrate my skills in 
-        data analysis, machine learning, and data visualization, with a focus on applications 
-        in finance, fintech, energy markets, and insurance.
+            Text about me goes here why do i want to work in financial markets
         """)
 
     # Skills section
@@ -64,8 +52,8 @@ def show():
         st.markdown("""
         * Python (pandas, numpy)
         * R (dplyr, tidyrm, ggplot2, shiny)
+        * SQL & Database Management (Big Query & ERD diagrams)
         * Cypher (Graph Query Language)
-        * SQL & Database Management (ERD diagrams)
         * Data Storage (JSON & Parquets)
         * Javascript, HTML & CSS
         * Haskell (Functional Programming)
@@ -74,13 +62,13 @@ def show():
     with col2:
         st.subheader("Domain Expertise")
         st.markdown("""
-        * A/B & Incrementally Tests
-        * Geo Experiments
+        * Geo Experiments, A/B & Incrementally Tests
         * Model Forecasting
         * Customer Segmentation
-        * Bayesian Regression Modelling
-        * Optimizations
+        * Bayesian Time Series Regression Modelling
+        * Optimisations
         * Operational Efficiency & Automation
+        * Knowledge Graphs
         """)
     
     with col3:
@@ -96,36 +84,20 @@ def show():
         """)
     
     # Experience section
-    st.header("Experience")
-    
-    # Format: Company, Position, Date Range, Description
+    st.header("Employment History")
+    # Format: Company, Position, Date Range
     experiences = [
         {
             "company": "Independent Marketing Sciences",
             "company_url": "https://im-sciences.com/",
-            "position": "Lead Data Analyst",
-            "period": "Nov 2024 - Present",
-            "description": """
-            • Text
-            """
-        },
-        {
-            "company": "Independent Marketing Sciences",
-            "company_url": "https://im-sciences.com/",
-            "position": "Senior Data Analyst",
-            "period": "June 2023 - October 2024",
-            "description": """
-            • Text
-            """
+            "highest_position": "Lead Data Analyst",
+            "period": "01 June 2023 - Present",
         },
         {
             "company": "Omnicom Group",
             "company_url": "https://www.omnicomgroup.com/",
-            "position": "Data Analyst",
-            "period": "February 2022 - May 2023",
-            "description": """
-            • Text
-            """
+            "highest_position": "Data Analyst",
+            "period": "01 February 2022 - 31 May 2023",
         }
     ]
     
@@ -136,37 +108,23 @@ def show():
                 st.markdown(f"### [{exp['company']}]({exp['company_url']})")
             else:
                 st.subheader(exp["company"])
-            st.write(exp["position"])
+            st.write(exp["highest_position"])
             st.write(exp["period"])
-        with col2:
-            st.markdown(exp["description"])
         st.markdown("---")
     
     # Education section
     st.header("Education")
     
-    col1, col2, col3, col4, = st.columns([2, 3 , 4, 5])
+    col1, col2, = st.columns([2, 3])
     with col1:
         st.markdown("### [University of Bath](https://www.bath.ac.uk/)")
         st.write("Master of Science in Computer Science")
         st.write("2020 - 2021")
     with col2:
-        st.markdown("""
-        • Grade: Distinction
-        • Thesis: "Deep Learning Architectures for High-Frequency Algorithmic Trading: A Comparative Performance Analysis"
-        • Relevant Courses: Functional Programming, Cryptography, Deep Reinforcement Learning, Software Engineering, Intelligent Control & Cognitive Systems. 
-        """)
-    with col3:
         st.markdown("### [University of Reading](https://www.reading.ac.uk/)")
         st.write("Bachelors of Science in Economics")
         st.write("2017 - 2020")
-    with col4:
-        st.markdown("""
-        • Grade: First Class (1.1)
-        • Thesis: "Spatial Determinants of Agricultural Productivity: A Geospatial Regression Analysis of Yield Variability"
-        • Relevant Courses: Applied Econometrics, Financial Economics, Accounting & Finance, Money & Banking, History of Economic Thought, Advanced Microeconomics & Advanced Macroeconomics.
-        """)
-        
+                
     # Projects highlight section
     st.header("Project Highlights")
     st.markdown("""
