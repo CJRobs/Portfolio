@@ -10,7 +10,7 @@ class WarningFilter(io.StringIO):
     def write(self, s):
         if "missing ScriptRunContext" not in s and "No runtime found" not in s:
             sys.__stderr__.write(s)
-            
+                
 sys.stderr = WarningFilter()
 
 # Configure the page
