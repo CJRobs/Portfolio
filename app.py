@@ -1,7 +1,6 @@
 import streamlit as st
 import project1
 import project2
-import project3
 import about_me
 import sys
 import io
@@ -41,7 +40,7 @@ st.markdown("""
 
 # Create the sidebar navigation
 st.sidebar.title("Navigation")
-selection = st.sidebar.radio("Go to", ["About Me", "Currency Arbitrage Network", "Equity Valuations", "Customer Segmentation"])
+selection = st.sidebar.radio("Go to", ["About Me", "Currency Arbitrage Network", "Equity Valuations"])
 
 # Display the selected page
 if selection == "About Me":
@@ -50,5 +49,3 @@ elif selection == "Currency Arbitrage Network":
     project1.show()
 elif selection == "Equity Valuations":
     project2.show()
-elif selection == "Customer Segmentation":
-    project3.show()
